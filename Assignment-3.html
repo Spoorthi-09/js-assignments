@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date</title>
+    
+</head>
+<body style = "background-color: whitesmoke;">
+    <p><center><h1 style = "color:teal;"><u>Today's Date in different formate.</u></h1></center></p>
+    <script type = "text/javascript">
+        var x = new Date();
+        var day = x.getDate();
+
+        var mon = x.getMonth()+1; 
+        var year = x.getFullYear();
+        if(day<10) 
+        {
+            day='0'+day;
+        } 
+
+        if(mon<10) 
+        {
+            mon='0'+mon;
+        } 
+        x = mon+'-'+day+'-'+year;
+        document.write("<center><h2>"+x+"</h2></center>");
+        console.log(x);
+
+        x = mon+'/'+day+'/'+year;
+        document.write("<center><h2>"+x+"</h2></center>");
+        console.log(x);
+
+        x = day+'-'+mon+'-'+year;
+        document.write("<center><h2>"+x+"</h2></center>");
+        console.log(x);
+
+        x = day+'/'+mon+'/'+year;
+        document.write("<center><h2>"+x+"</h2></center>");
+        console.log(x);
+
+    </script>
+</body>
+</html>
