@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date and Time</title>
+    <script type = "text/javascript">
+
+        var x = new Date();
+         var day = x.getDay();
+
+         var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+         document.write("<center>");
+         document.write("<h1>Today is : " + daylist[day] + ".</h1>");
+         document.write("</center>");
+         console.log("Today is : " + daylist[day] + ".");
+
+         var hr = x.getHours();
+         var min = x.getMinutes();
+         var sec = x.getSeconds();
+
+         var suffix = (hr >= 12)? " PM ":" AM ";
+         hr = (hr >= 12)? hr - 12: hr;
+         if (hr===0 && suffix===' PM ') 
+         { 
+            if (min===0 && sec===0)
+            { 
+                hr=12;
+                suffix=' Noon';
+            } 
+            else
+            { 
+                hr=12;
+                suffix=' PM';
+            } 
+         } 
+         if (hr===0 && suffix===' AM ') 
+         { 
+            if (min===0 && sec===0)
+            { 
+                hr=12;
+                suffix=' Midnight';
+            } 
+            else
+            { 
+                hr=12;
+                suffix=' AM';
+            } 
+         } 
+         document.write("<center>");
+         document.write("<h1>Current Time : "+hr + suffix + " : " + min + " : " + sec+"</h1>");
+         document.write("</center>");
+         console.log("Current Time : "+hr + suffix + " : " + min + " : " + sec);
+    </script>
+</head>
+<body>
+</body>
+</html>
+    
