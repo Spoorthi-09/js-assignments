@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference</title>
+</head>
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+<body>
+    <h2>Difference between "var" , "let" , "const"</h2>
+    <br>
+    <table>
+        <tr>
+          <th>Description</th>
+          <th>var</th>
+          <th>let</th>
+          <th>const</th>
+        </tr>
+        <tr>
+          <td>Declarations</td>
+          <td>Globally scoped or Function scoped </td>
+          <td>Block scoped</td>
+          <td>Block scoped</td>
+        </tr>
+        <tr>
+          <td>Variables</td>
+          <td>Variables can be updated and re-declared within its scope</td>
+          <td>Variables can be updated but not re-declared</td>
+          <td>Variables can neither be updated nor re-declared.</td>
+        </tr>
+        <tr>
+          <td>Initializations</td>
+          <td>Can be declared without being initialized,</td>
+          <td>Can be declared without being initialized,</td>
+          <td>Must be initialized during declaration.</td>
+        </tr>
+        
+      </table>
+      
+      <script>
+          console.info("<h2>Programming elements</h2>")
+          //var
+          var test = "Student";
+    
+            function newFunction() {
+                var test1 = "hello";
+                var test1 = "there";//can be re-declared inside scope
+            }
+            console.log(test1); // error: test1 is not defined
+
+            //let
+            let x = "Hi";
+            if (true) {
+                let x = "Hello";
+                console.log(x); // "Hello"
+            }
+            console.log(x); // "Hi"
+
+            //const
+            const y = "Hi";
+            y = "Hello";// error: Assignment to constant variable
+      </script>
+</body>
+</html>
