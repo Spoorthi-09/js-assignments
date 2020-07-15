@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes in Javascript</title>
+</head>
+<body>
+    <h2>Datatypes in Javascript</h2>
+    <h3>1. number</h3>
+    <p>The number type represents both integer and floating point numbers.<br>
+
+    There are many operations for numbers, e.g. multiplication *, division /, addition +, subtraction -, and so on.<br>
+        
+    Besides regular numbers, there are so-called “special numeric values” which also belong to this data type: Infinity, -Infinity and NaN.</p>
+    <script>
+        let n = 123;
+        n = 12.345;
+
+        console.log( 1 / 0 ); // Infinity
+        console.log( "not a number" / 2 + 5 ); // NaN
+
+    </script>
+
+    <!--BigInt-->
+    <h3>2. BigInt</h3>
+    <p>BigInt type was recently added to the language to represent integers of arbitrary length.<br>
+
+    A BigInt value is created by appending n to the end of an integer:</p>
+    <script>
+        const bigInt = 1234567890123456789012345678901234567890n;
+    </script>
+
+    <!--String-->
+    <h3>3. String</h3>
+    <p>A string in JavaScript must be surrounded by quotes.<br>
+    Double and single quotes are “simple” quotes. There’s practically no difference between them in JavaScript.
+        <br>
+    Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in ${…}.
+    </p>
+    <script>
+    let name = "John";
+
+    // embed a variable
+    console.log( `Hello, ${name}!` ); // Hello, John!
+
+    // embed an expression
+    console.log( `the result is ${1 + 2}` ); // the result is 3
+
+    console.log( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
+
+    </script>
+
+    <!--boolean-->
+    <h3>4. Boolean</h3>
+    <p>
+    The boolean type has only two values: true and false.
+        <br>
+    This type is commonly used to store yes/no values: true means “yes, correct”, and false means “no, incorrect”.
+    </p>
+    <script>
+        //for instance
+        let x = true;
+        let y = false;
+        //comparision
+        let z = 5>10;
+        console.log(z);//false
+    </script>
+
+    <!--The "null" value-->
+    <h3>5. null</h3>
+    <p>
+        It forms a separate type which contains null value only.
+    </p>
+    <script>
+        let po = null;
+    </script>
+
+    <!--The "undefined" value-->
+    <h3>6. undefined</h3>
+    <p>
+        It means that the value is not defined.
+        <br>
+        If a variable is declared, but not assigned, then its value is undefined.
+    </p>
+    <script>
+        let za;
+        console.log(za);//undefined
+    </script>
+
+    <!--object-->
+    <h3>7.Object type</h3>
+    <p>
+        The object type is special.
+        <br>
+        All other types are called “primitive” because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
+    </p>
+
+    <!--symbols-->
+    <h3>8. Symbol</h3>
+    <p>
+        The symbol type is used to create unique identifiers for objects.
+    </p>
+
+    <!--typeof operator-->
+    <h3>The typeof operator</h3>
+    <p>
+        The typeof operator returns the type of the argument. It’s useful when we want to process values of different types differently or just want to do a quick check.<br>
+
+        It supports two forms of syntax:<br>
+
+        As an operator: typeof x.<br>
+        As a function: typeof(x).<br>
+        In other words, it works with parentheses or without them. The result is the same.<br>
+    </p>
+    <script>
+        console.log(typeof undefined) // "undefined"
+
+        console.log(typeof 200) // "number"
+
+        console.log(typeof 700n) // "bigint"
+
+        console.log(typeof true) // "boolean"
+
+        console.log(typeof "LetsUpgrade") // "string"
+
+        console.log(typeof Symbol("id")) // "symbol"
+
+    </script>
+    
+</body>
+</html>
