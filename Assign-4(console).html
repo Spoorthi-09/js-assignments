@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console</title>
+</head>
+<body>
+    <h2>Console Object</h2>
+    <p>The Console object provides access to the browser's debugging console.
+    </p>
+    <br>
+    <script type = "text/javascript">
+            document.write("(Inspect console for the output.)")
+
+        //assert()
+        document.write("<h3>1.<u> assert()</u></h3>");
+        document.write("The console.assert() method writes a message to the console, but only if an expression evaluates to false..");
+        document.write("<br>");
+
+        document.write("<h4>Example:-</h4>")
+        document.write("Inspect console for the output.")
+        document.write("<br>");
+
+        console.assert(document.getElementById("thisid"), "Element with ID 'thisid' not found");
+
+        //clear()
+        document.write("<h3>2.<u> clear()</u></h3>");
+        document.write("<p>The console.clear() method clears the console.<br>The console.clear() method will also write a message in the console: 'Console was cleared'.</p>");
+        document.write("<h4>Syntax: console.clear()</h4>");            
+
+        console.clear();
+
+        //count()
+        document.write("<h3>3.<u> count()</u></h3>");
+        document.write("<p>Writes to the console the number of times that particular console.count() is called.</p>");
+        document.write("<h4>Syntax: console.count(label)</h4>");            
+
+        for (i = 0; i < 10; i++)
+        {
+            console.count();
+        }
+
+        //error()
+        document.write("<h3>4.<u> error()</u></h3>");
+        document.write("<p>The console.error() method writes an error message to the console.</p>");
+        document.write("<h4>Syntax: console.error(message)</h4>");  
+
+        var Ob = { name : "Mary", DOB : "09-01-2001" };
+        console.error(Ob);
+
+        //group()
+        document.write("<h3>5.<u> group()</u></h3>");
+        document.write("<p>The console.group() method indicates the start of a message group.</p>");
+        document.write("<h4>Syntax: console.group(label)</h4>"); 
+
+        console.log("Hello there!");
+        console.groupCollapsed();
+        console.group();
+        console.log("This is Spoorthi Bhat!");
+        console.groupEnd();
+        console.log("A student at LetsUpgrade.");
+
+        //info()
+        document.write("<h3>6.<u> info()</u></h3>");
+        document.write("<p>The console.info() method writes a message to the console.</p>");
+        document.write("<h4>Syntax: console.info(message)/h4>"); 
+
+        console.info("Learning Javascript!");
+
+        //log()
+        document.write("<h3>7.<u> log()</u></h3>");
+        document.write("<p>The console.log() method writes a message to the console.</p>");
+        document.write("<h4>Syntax: console.log(message)/h4>");
+
+        console.log("Hello there!");
+
+        //table()
+        document.write("<h3>8.<u> table()</u></h3>");
+        document.write("<p>The console.table() method writes a table in the console view.<br>The first parameter is required, and must be either an object, or an array, containing data to fill the table.</p>");
+        document.write("<h4>Syntax: console.table(tabledata, tablecolumns)</h4>");
+
+            var lang1 = { name : "c", type : "Procedure Oriented" }
+            var lang2 = { name : "c++", type : "Object Oriented" }
+            var lang3 = { name : "Java", type : "Object Oriented" }
+
+            console.table([lang1, lang2, lang3]);
+
+
+        //time()
+        document.write("<h3>9.<u> time()</u></h3>");
+        document.write("<p>The console.time() method starts a timer in the console view.<br>Use the console.timeEnd() method to end the timer and display the result in the console.view.<br>Use the label parameter to name the timer, then you are able to have many timers on the same page.</p>");
+        document.write("<h4>Syntax: console.time(label)</h4>");
+
+        console.time("test");
+        for (i = 0; i < 5; i++) {
+            document.write("Hey there!");
+            document.write("<br>");
+        }
+        console.timeEnd("test");
+
+        //trace()
+        document.write("<h3>10.<u> trace()</u></h3>");
+        document.write("<p>The console.trace() method displays a trace that show how the code ended up at a certain point.</p>");
+        document.write("<h4>Syntax: console.trace(label)</h4>");
+
+        console.trace();
+
+        //warn()
+        document.write("<h3>11.<u> warn()</u></h3>");
+        document.write("<p>The console.warn() method writes a warning to the console.</p>");
+        document.write("<h4>Syntax: console.warn(message)</h4>");
+
+        console.warn("Please check, Something went wrong!");
+
+    </script>
+    
+</body>
+</html>
