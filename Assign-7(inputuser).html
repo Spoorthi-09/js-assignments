@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input from user and log</title>
+    
+</head>
+<body>
+    <center>
+            <h2><u>User Details</u></h2>
+            <form >
+            <input type="text" id = "fname" placeholder = "Firstname">
+            <br><br>
+            <input type="text" id = "lname" placeholder = "Lastname">
+            <br><br>
+            <input type="email"  id="email" placeholder= "Email">
+            <br><br>
+            <input type="password" id = "pass" placeholder = "Password">
+            <br><br>
+            <button type="reset" onclick="Click()">Submit</button>
+            </form>
+
+            <script type = "text/javascript">
+            function Click(){
+                console.log(document.getElementById('fname').value);
+                console.log(document.getElementById('lname').value);
+                console.log(document.getElementById('email').value);
+                console.log(document.getElementById('pass').value);
+            }
+        
+            </script>
+            
+    </center>
+    
+</body>
+</html>
