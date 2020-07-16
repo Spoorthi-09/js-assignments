@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some methods of strings and arrays</title>
+</head>
+<body>
+    <h2>Some Methods of Arrays and String</h2>
+    <h3>Methods of Strings</h3>
+    <script>
+        let text = "  Textual material    ";
+        let text1 = "1";
+        console.log(text.charAt('3'));
+        console.log(text.charCodeAt('5'));
+        console.log(text.concat(text,' ',text1));
+        console.log(text.substring(1,4));
+        console.log(text.slice(0,2));
+        console.log(text.replace('ex','tt'));
+        console.log(text.repeat(4));
+        console.log(text.localeCompare(text1));
+        console.log(text.trim());
+    </script>
+    <h3>Methods in Arrays</h3>
+    <script>
+        var things = ['books','pencils','pens','rulers'];
+        var thin2 = ['towel'];
+        var thin3 = ['refrigerator'];
+        console.log(things.toString());
+        console.log(things.join('*'));
+        console.log(things.pop());
+        console.log(things.push('dress'));
+        console.log(things.shift());
+        console.log(things.unshift('knife'));
+        console.log(things.splice(2,0,'chair','table'));
+        console.log(things.splice(0,3));
+        console.log(things.concat(thin2,thin3));
+        console.log(things.slice(1));
+    </script>
+    
+</body>
+</html>
