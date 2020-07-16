@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade System</title>
+    <style>
+        input[type=number]{
+            width : 60px;
+        }
+    </style>
+</head>
+<body style = "background-image: radial-gradient(circle,rgb(189, 122, 189),rgb(211, 108, 125));">
+    <center>
+    <h2 style = "color: rgb(126, 32, 90);">Enter your marks <br>and obtain your grade here!</h2>
+    <label style = "color: rgb(168, 19, 14);"><u><b>Marks</b></u> :</label>
+    <input type="number" name="marks" id="mar" placeholder = "Enter">
+    <br><br>
+    <button style = "color:wheat;background-color: black;" onclick = "f1()">Enter</button>
+    </center>
+    <!--Usiing conditional statements-->
+    <script>
+        function f1(){
+            let mark = document.getElementById('mar').value;
+            if(mark > 100 || mark < 0)
+            {
+                alert("Invalid marks. Please try again.");
+            }
+            else if(mark == 100){
+                let grade = 'A';
+                let res ="Marks is "+mark+" and grade is "+grade;
+                alert("Congratulations!!"+res);
+                console.log(res);
+            }
+            else if(mark < 100 && mark > 80)
+            {
+                let grade = 'A';
+                let res = "Marks is "+mark+" and grade is "+grade;
+                alert(res);
+                console.log(res);
+
+            }
+            else if(mark <= 80 && mark > 60){
+                let grade = 'B';
+                let res = "Marks is "+mark+" and grade is "+grade;
+                alert(res);
+                console.log(res);
+
+            }else if(mark <= 60 && mark > 40){
+                let grade = 'C';
+                let res = "Marks is "+mark+" and grade is "+grade;
+                alert(res);
+                console.log(res);
+
+            }else{
+                let fail = "Student has failed!";
+                alert(fail);
+                console.log(fail);
+            }
+            
+        }
+    </script>
+    <!--Using ternary operators-->
+    <!-- <script type = "text/javascript">
+
+    function f1(){
+            let mark = document.getElementById('mar').value; 
+            let grade = (mark == 100) ? 'A' :
+             (mark < 100 && mark > 80) ? 'A' : (mark <= 80 && mark > 60) ? 'B' : (mark <= 60 && mark > 40) ? 'C' : "Student has failed!";
+            let res = "Marks is "+mark+" and grade is "+grade;
+            alert(res);
+            console.log(res);
+
+    }     
+
+    </script> -->
+    
+</body>
+</html>
