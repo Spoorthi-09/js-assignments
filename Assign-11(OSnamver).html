@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split</title>
+</head>
+<body style = "background-image:linear-gradient(to right,grey,whitesmoke);">
+    <center>
+    <h2 style = "color:whitesmoke;">Operating System</h2>
+    <input type="text" id="this" placeholder = "Enter OS name and Version">
+    <br><br>
+    <button style = "background-color: yellowgreen;color :rgb(76, 43, 107)" onclick = "f1()">Show</button>
+    </center>
+    <script type = "text/javascript">
+        function f1(){
+        var val = document.getElementById('this').value;
+        console.log(val);//osname version
+        var val2 = val.split(" ");
+        console.log(val2);//['osname','version']
+        var val3 = `The OS name is ${val2[0]} and version is ${val2[1]}`;
+        console.log(val3);//'The OS name is osname and version is version'
+        alert(val3);
+        }
+    </script>
+    
+</body>
+</html>
