@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else</title>
+</head>
+<body>
+    <center>
+    <h2><u>Alocohol Consumption Eligibility</u></h2>
+    <label>Are you 21+ years old? </label>
+    <select id = "box">
+        <option value = "yes">Yes</option>
+        <option value = "no">No</option>
+    </select>
+    <button onclick = "Click()">Select</button>
+    <script>
+        function Click(){
+        var select = document.getElementById('box');
+        if(select.options[select.selectedIndex].value == "yes")
+        {
+            alert("You are more than 21 years old and so can drink");
+            console.log("Can Drink!!");
+        }
+        else
+        {
+            alert("You are not more than 21 years old and so cannot drink")
+            console.log("Cannot Drink!!");
+        }
+        }
+    </script>
+    </center>
+    
+</body>
+</html>
