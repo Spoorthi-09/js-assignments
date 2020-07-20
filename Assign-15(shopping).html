@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+<body style = "background-color: whitesmoke;">
+    <script>
+        let shoppingList = ['Cheese',' Butter',' Bread',' Pasta',' Rice',' Cereals',' Cooking Oil'];
+        document.write("<h2 style = 'color:maroon;'><u>Shopping List</u></h2>")
+        for(let i = 0 ;i < shoppingList.length ; i++)
+        {
+            
+            document.write((i+1)+". "+shoppingList[i]);
+            document.write("<br>");
+            console.log(shoppingList[i]);
+        }
+
+        let shoppingBasket = ['Chocolates',' Biscuits',...shoppingList,' IceCream',' Fruits'];
+        document.write("<h2 style = 'color:maroon;'><u>Shopping Basket</u></h2>");
+        for(let i = 0 ;i < shoppingBasket.length ; i++)
+        {
+            
+            document.write((i+1)+". "+shoppingBasket[i]);
+            document.write("<br>");
+            console.log(shoppingBasket[i]);
+        }
+
+    </script>
+    
+</body>
+</html>
