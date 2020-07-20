@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desructor</title>
+</head>
+<body style = "background-image: linear-gradient(to right , rgb(100, 219, 150),silver);">
+    <script>
+        const student = {
+            name : "Helsinki",
+            age : 24,
+            projects : {
+                diceGame : "Two player dice game using JavaScript"
+            }
+        }
+        const{name , age , projects:{diceGame}} = student;
+        document.write("<center><h2><u>Object Content</u></h2></center>");
+        document.write(`<h3><u>Name</u> : ${name}</h3>`);
+        document.write(`<h3><u>Age</u> : ${age}</h3>`);
+        document.write(`<h3><u>Projects</u><br> DiceGame : ${diceGame}</h3>`);
+        console.log(name,age,diceGame);
+
+
+    </script>
+    
+</body>
+</html>
