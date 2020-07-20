@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body style = "background-color: wheat;">
+    <h2 style = "text-align: center;"><u>FizzBuzz</u></h2>
+
+    <h3 style = "text-align: center;">
+        <p>
+            Multiple of 3 = "Fizz"
+        </p>
+        <p>
+            Multiple of 5 = "Buzz"
+        </p>
+        <p>
+            Multiple of 3 & 5 = "FizzBuzz"
+        </p>
+    </h3>
+    <center>
+    <script>
+        for(let i = 1 ; i<=100 ; i++)
+        {
+            if(i%3 == 0)
+            {
+                
+                
+                    document.write(i+" = fizz");
+                    document.write("<br>");
+                    console.log(i+" = fizz");
+                
+            }
+             if(i%5 == 0)
+            {
+                
+                document.write(i+" = buzz");
+                document.write("<br>");
+                console.log(i+" = buzz");
+            }
+            if(i%5 == 0 && i%3 == 0)
+                {
+                    document.write(i+" = fizzbuzz");
+                    document.write("<br>");
+                    console.log(i+" = fizzbuzz");
+                }
+            
+        }
+    </script>
+    </center>
+</body>
+</html>
