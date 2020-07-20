@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <script>
+        let ask = (question,yes,no) => {if(confirm(question)) { yes(); }else no()};
+        let res = ask("Do you agree?",OK=>alert("You agreed."),Cancel=>alert("You cancelled the execution."));
+    </script>
+    
+</body>
+</html>
