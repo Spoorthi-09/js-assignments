@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+    <style>
+        input[type=number]
+        {
+            width:80px;
+        }
+    </style>
+</head>
+<body style = "background-image:radial-gradient(rgb(209, 216, 196),rgb(211, 211, 79));">
+    <center>
+        <h2 style = "background-color: chocolate;color:rgb(240, 236, 223);"><u>Sales Department!!</u></h2>
+        <p>Enter your sales here:</p>
+        <input type="number" name="sales" id="sales">
+        <button onclick="f1()">Enter</button>
+        <script>
+            function f1(){
+                var sal = document.getElementById('sales').value;
+                if(sal>0 && sal<=5000)
+                {
+                    var res = sal*0.02;
+                    console.log("Commission = "+res)
+                    alert("You are rewarded with "+res);
+                }
+                else if(sal>=5001 && sal<=10000)
+                {
+                    var res = (5000*0.02)+((sal-5000)*0.05);
+                    console.log("Commission = "+res)
+                    alert("You are rewarded with "+res);
+                }
+                else if(sal>=10001 && sal<=20000)
+                {
+                    var res = (5000*0.02)+(5000*0.05)+((sal-10000)*0.07);
+                    console.log("Commission = "+res)
+                    alert("You are rewarded with "+res);
+                }
+                else if(sal>20000)
+                {
+                    var res = (5000*0.02)+(5000*0.05)+(10000*0.07)+((sal-20000)*0.1);
+                    console.log("Commission = "+res)
+                    alert("You are rewarded with "+res);
+                }
+                
+            }
+        </script>
+
+    </center>
+    
+</body>
+</html>
