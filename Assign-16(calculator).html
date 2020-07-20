@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        input[type=number]
+        {
+            width:30px;
+        }
+    </style>
+</head>
+<body style = "background-image: linear-gradient(to left,black,grey)">
+    <center>
+        <h2 style = "color:violet"><u>Calculator!</u></h2>
+        <h3 style = "color:goldenrod">
+            Enter your values here
+        </h3>
+        <input type="number" name="variable1" id="var1" style = "background-color:honeydew;">
+        <input type="number" name="variable2" id="var2" style = "background-color: honeydew;">
+        <br><br>
+        <h3 style = "color:goldenrod">Select Operator:</h3>
+        <select name="" id="selectbox" style = "background-color: honeydew;">
+            <option value="null"></option>
+            <option value="add">Addition</option>
+            <option value="sub">Subtraction</option>
+            <option value="mul">Multiplication</option>
+            <option value="div">Division</option>
+            <option value="sqrt">SquareRoot</option>
+            <option value="perc">Percentage</option>
+        </select>
+        <br><br>
+        <button style = "background-color: rgb(228, 112, 150);" onclick = "f1()">Compute</button>
+        <script>
+            function f1(){
+            let a = Number(document.getElementById("var1").value);
+            let b = Number(document.getElementById("var2").value);
+            let select = document.getElementById("selectbox");
+            switch(select.options[select.selectedIndex].value)
+            {
+                case 'add' : var res = a + b;
+                                  alert(a+"+"+b+"="+res);
+                                  console.log(a+"+"+b+"="+res);
+                                  break;
+                case 'sub' : var res = a - b;
+                                  alert(a+"-"+b+"="+res);
+                                  console.log(a+"+"+b+"="+res);
+                                  break;
+                case 'mul' : var res = a * b;
+                                  alert(a+"*"+b+"="+res);
+                                  console.log(a+"*"+b+"="+res);
+                                  break;
+                case 'div' : if(b == 0)
+                             {
+                                 alert("Undefined!");
+                                 console.log("Undefined");
+                             }else
+                             {
+                                 var res = a / b;
+                                 alert(a+"/"+b+"="+res);
+                                  console.log(a+"/"+b+"="+res);
+                             }
+                             break;
+                case 'sqrt' : var res = Math.sqrt(a);
+                              alert("square root of "+a+"="+res);
+                              console.log("square root of"+a+"="+res)
+                              break;
+                case 'perc' : var res = (a/100)*b;
+                              alert("Percentage is "+res);
+                              console.log("Percentage is "+res);
+                              break;
+                default : alert("Please enter the expression and operation!");
+            }
+            }
+
+        </script>
+    </center>
+</body>
+</html>
