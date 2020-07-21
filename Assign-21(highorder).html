@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter and Map</title>
+    <style>
+        input[type=number]
+        {
+            width:50px;
+        }
+    </style>
+</head>
+<body style = "text-align: center;background-image:linear-gradient(to right,crimson,red);">
+    <h2 style = "background-color: rgb(185, 179, 179);color:crimson">Cube of odd numbers</h2>
+    <label for="num" style = "color: rgb(201, 221, 201);"><h3>Enter a positive number:</h3></label>
+    <input type="number" name="num" id="num">
+    <button style = "background-color: darkturquoise;" onclick="f1()">Enter</button>
+    <script>
+        function f1(){
+        var number = document.getElementById("num").value;
+        if(number > 0)
+        {
+            let arr = [];
+            for(var i = 1 ; i <= number ; i++){
+                arr.push(i);
+            }
+            document.write(`<li>Numbers till ${number} : `+arr+`</li>`);
+            console.log(arr);
+
+            let odd = arr.filter((el)=>el%2 != 0);
+            document.write(`<li>Odd numbers between 0-${number} : `+odd+`</li>`);
+            console.log(odd);
+
+            let cubes = odd.map((el)=>el**3);
+            document.write(`<li>Cubes of the obtained odd numbers : `+cubes+`</li>`)
+            console.log(cubes);
+
+        }else if(number == ""){
+            alert("No input!");
+        }
+        else
+        {
+            alert("Please enter a positive number!");
+        }
+        }
+    </script>
+    
+</body>
+</html>
