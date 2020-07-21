@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User, Moderator and Admin</title>
+</head>
+<body>
+    <script>
+        class User{
+            constructor(name,age,email){
+                this.name=name;
+                this.age=age;
+                this.email=email;
+                this.coins=0;
+                this.courses=[];
+            }
+            login()
+            {
+                console.log(`${this.name} has logged in`);
+                return this;
+            }
+            logout()
+            {
+                console.log(`${this.name} has logged out`);
+                return this;
+            }
+        }
+        class Moderator extends User
+        {
+            constructor(name,age,email,role)
+            {
+                super(name,age,email);
+                this.role="Moderator";
+            }
+            addCoins(user,coin){
+                user.coins += coin;
+                console.log(user); 
+                return this;
+            }
+            removeCoins(user,coin){
+                user.coins -=coin;
+                console.log(user); 
+                return this;
+            }
+        }
+        class Admin extends Moderator
+        {
+            addCourse(user,course)
+            {
+                user.courses.push(course);
+                console.log(user);
+            }
+            removeCourse(user,course)
+            {
+                user.courses.pop(course);
+                console.log(user);
+            }
+        }
+        let user1 = new User('Spoorthi',19,'spoorthi@gmail.com');
+        let user2 = new User('Sharanya',16,'sharanya@gmail.com');
+        let user3 = new User('Surabhi',21,'surabhi@gmail.com');
+        let mod1 = new Moderator('Dravid',27,'dravid@gmail.com');
+        let mod2 = new Moderator('Druva',23,'druva@gmail.com');
+        let adm1 = new Admin('Ananya',28,'ananya@gmail.com');
+
+        let users = [user1,user2,user3,mod1,mod2,adm1];
+        users.forEach(el=>{
+            console.log(el);
+        });
+
+        mod1.addCoins(user1,10);
+        mod1.removeCoins(user1,1);
+
+        adm1.addCourse(user1,'js');
+        adm1.addCourse(user1,'python');
+        adm1.addCourse(user1,'java');
+        // adm1.removeCourse(user1,'js');
+    </script>
+    
+</body>
+</html>
