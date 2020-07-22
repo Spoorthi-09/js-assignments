@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+    <style>
+        .dark-mode
+        {
+            background-color: rgb(10, 10, 10);
+            color:cornsilk;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style = "text-align: center;">
+    <div id = "welcome" style = "background-color: rgb(218, 167, 101);font-size: 25px;text-decoration: underline overline;"></div>
+    <br><br>
+    <div id = "time" style = "font-size: 20px;" ></div>
+    <br><br>
+    <button onclick="f2()">Toggle Dark Mode</button>
+   <script>
+       var name = prompt("Please enter your name here:","Anonymous");
+        const wel = document.getElementById('welcome').innerText += `Welcome ${name}`;
+        const ctime = document.getElementById('time');
+        function clock()
+        {
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            ctime.innerHTML = "Clock : "+time;
+        }
+        setInterval(clock,1000);
+
+        function f2(){
+            var bod = document.body;
+            bod.classList.toggle("dark-mode");
+        
+        }
+
+
+   </script>
+</body>
+</html>
